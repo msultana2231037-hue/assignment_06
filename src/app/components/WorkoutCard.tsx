@@ -13,7 +13,16 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
   return (
     <Link href={`/workouts/${workout.id}`}>
       <div className="overflow-hidden rounded-2xl border border-[#292e37] bg-[#15181e]">
-        
+        {/* Image */}
+        <div className="relative h-52 w-full">
+          <Image
+            src={workout.image}
+            alt={workout.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            className="object-cover"
+          />
+        </div>
        
        
       </div>
