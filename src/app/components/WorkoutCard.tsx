@@ -23,6 +23,18 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
             className="object-cover"
           />
         </div>
+
+        {/* Muscle*/}
+        <div className="ml-5 mt-5 flex flex-wrap gap-2">
+          {workout.muscleGroups.map((muscle) => (
+            <span
+              key={muscle}
+              className="rounded-full bg-[#c8ff00] px-3 py-1 text-xs font-bold text-[#191917]"
+            >
+              {muscle.toUpperCase()}
+            </span>
+          ))}
+        </div>
        
        
       </div>
