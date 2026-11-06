@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <FitlogProvider>
           <Navbar />
-          <main className="min-h-screen px-4 pb-24 pt-[96px] sm:px-6">
+          <main className="min-h-screen px-4 pb-24 pt-24 sm:px-6">
             {children}{" "}
             <ToastContainer
               position="top-right"
