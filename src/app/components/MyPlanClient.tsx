@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useMemo, useState } from "react";
 import WorkoutListItem from "@/app/components/WorkoutListItem";
 import { useFitlog } from "@/app/context/FitlogContext";
@@ -56,7 +56,11 @@ export default function MyPlanClient({ initialTab }: { initialTab: PlanTab }) {
         </div>
         <label className="flex items-center gap-2 text-xs text-zinc-500">Sort By <span className="relative"><select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className="appearance-none rounded-lg border border-[#2a3039] bg-[#111419] py-2 pl-3 pr-9 text-xs text-white"><option value="duration">Duration</option><option value="calories">Calories</option><option value="rating">Rating</option></select><ChevronDown className="pointer-events-none absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2" /></span></label>
       </div>
-
+      <div className="mt-5 space-y-3">
+        {sorted.length === 0 ? (
+          <div className="grid min-h-75 place-items-center rounded-2xl border border-dashed border-[#292f38] text-center"><div><h2 className="font-display text-2xl">NOTHING HERE YET</h2><p className="mt-2 text-xs text-zinc-500">Browse the library and add a lift to get today moving.</p><Link href="/" className="mt-5 inline-block rounded-full bg-[#c8ff00] px-5 py-3 text-xs font-black text-black">Go to workouts</Link></div></div>
+        ) : sorted.map((workout) => <WorkoutListItem key={workout.id} workout={workout} tab={tab} />)}
+      </div>
     </div>
   );
 }
