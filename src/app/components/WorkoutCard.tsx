@@ -35,6 +35,17 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
             </span>
           ))}
         </div>
+         {/* Workout */}
+        <div className="p-5">
+          
+          <h3 className="text-xl font-normal uppercase leading-tight text-white">
+            {workout.name}
+          </h3>
+
+          <p className="mt-2.5 text-xs font-light text-[#8a8c83]">
+            {workout.equipment}
+          </p>
+
        
        
       </div>
