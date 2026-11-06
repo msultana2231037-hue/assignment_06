@@ -53,10 +53,25 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
                 {workout.duration} min
               </span>
             </div>
+            
+             <div className="flex items-center gap-2">
+              <Flame className="h-4 w-4 shrink-0 text-[#8a8c83]" />
+              <span className="text-xs font-light leading-none text-[#8a8c83]">
+                {workout.caloriesBurned}
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Star className="h-4 w-4 shrink-0 text-[#8a8c83]" />
+              <span className="text-xs font-light leading-none text-[#8a8c83]">
+                {workout.rating}
+              </span>
+            </div>
 
        
-       
-      </div>
+           </div> 
+        </div> {/* Workout section */}
+      </div> {/* Main card  */}
     </Link>
   );
 }
