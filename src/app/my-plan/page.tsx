@@ -48,7 +48,7 @@ export default function MyPlanPage() {
   }, [current]);
 
   /*
-   * Sort only the currently selected tab.
+   * Sort only the currently selected.
    */
   const sorted = useMemo(() => {
     const items = [...current];
