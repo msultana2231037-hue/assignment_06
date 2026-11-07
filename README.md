@@ -66,7 +66,7 @@ fitlog/
 │   │   ├── Navbar.tsx
 │   │   ├── Footer.tsx
 │   │   ├── WorkoutCard.tsx
-│   │   ├── Toast.tsx
+│   │   ├── ToastHost.tsx
 │   │   └── ...
 │   │
 │   ├── context/
