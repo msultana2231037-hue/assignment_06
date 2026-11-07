@@ -61,7 +61,7 @@ The application allows users to browse a workout library, view workout details, 
 ```text
 fitlog/
 │
-├── app/
+├── src/app
 │   ├── components/
 │   │   ├── Navbar.tsx
 │   │   ├── Footer.tsx
@@ -78,7 +78,7 @@ fitlog/
 │   ├── my-plan/
 │   │   └── page.tsx
 │   │
-│   ├── workout/
+│   ├── workouts/
 │   │   └── [id]/
 │   │       └── page.tsx
 │   │
@@ -94,7 +94,6 @@ fitlog/
 │   ├── banner.png
 │   └── ...
 │
-├── .env.local
 ├── package.json
 ├── tsconfig.json
 ├── next.config.ts
